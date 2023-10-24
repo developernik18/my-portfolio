@@ -34,7 +34,7 @@ export default function ProjectTemplate({projectData}: {projectData: ProjectData
         </div>
         <div className="right basis-1/2">
           <div className="img-container max-h-[70vh] overflow-hidden shadow-md rounded">
-            <Image src={projectData.projectImage} alt={projectData.altImage} />
+            <Image src={projectData.projectImage} alt={projectData.imageAlt} />
           </div>
         </div>
       </div>

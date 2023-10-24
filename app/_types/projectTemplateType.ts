@@ -4,7 +4,7 @@ export type ProjectDataType = {
   title: string,
   paragraphs: string[],
   projectImage: StaticImageData,
-  altImage: string,
+  imageAlt: string,
   techStack: string[],
   websiteUrl: string,
 }
