@@ -1,6 +1,7 @@
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa6'
 import profilePic from '../_assets/profile-pic.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // image assets
 import htmlLogo from '../_assets/_tech-logos/HTML 5.png';
@@ -17,17 +18,21 @@ export default function HeroSection() {
   return (
     <section className="bg-gray-100 min-h-[90vh]">
       <section className="top container max-w-5xl mx-auto flex flex-row justify-between">
-        <section className="left max-w-md flex flex-col gap-6 py-10 min-h-[60vh] justify-center">
-          <h1 className=" text-5xl font-bold">
+        <section className="left max-w-xl flex flex-col gap-8 py-10 min-h-[60vh] justify-center">
+          <h1 className=" text-6xl font-bold">
             Front-End Focused Web Developer
           </h1>
-          <p>
+          <p className="text-lg">
             Hi, I’m Nikhil Kumar. 
             A Front-end Web Developer with 5+ years of experience.
           </p>
-          <div className="for-more-info flex flex-row gap-5">
-            <FaLinkedinIn />
-            <FaGithub />
+          <div className="for-more-info flex flex-row gap-5 text-lg">
+            <Link href={"https://www.linkedin.com/in/nikhil1994/"} target='_linkedin'>
+              <FaLinkedinIn />
+            </Link>
+            <Link href={"https://github.com/developernik18"} target='_github'>    
+              <FaGithub />
+            </Link>
           </div>
         </section>
         <section className="right max-w-md flex flex-col gap-6 py-10 min-h-[60vh] justify-center">

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: "Lato", system-ui, sans-serif;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 245, 245, 245;
@@ -25,4 +31,5 @@ body {
     )
     rgb(var(--background-start-rgb));
   min-height: 100vh;
+  
 }
