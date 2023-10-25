@@ -16,7 +16,7 @@ import nextLogo from '../_assets/_tech-logos/Next.png';
 
 export default function HeroSection() {
   return (
-    <section id='hero' className="bg-gray-100 min-h-[90vh]">
+    <section id='hero' className="bg-gray-100 min-h-[90vh] px-5 sm:px-10 xl:px-0">
       <section className="top container max-w-5xl mx-auto flex flex-row justify-between">
         <section className="left max-w-xl flex flex-col gap-8 py-10 min-h-[60vh] justify-center">
           <h1 className=" text-6xl font-bold">
@@ -35,7 +35,7 @@ export default function HeroSection() {
             </Link>
           </div>
         </section>
-        <section className="right max-w-md flex flex-col gap-6 py-10 min-h-[60vh] justify-center">
+        <section className="right max-w-md flex flex-col gap-6 py-10 pt-16 min-h-[60vh] justify-center">
           <Image src={profilePic} alt={"Profile picture"} />
         </section>
       </section>
