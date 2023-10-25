@@ -16,7 +16,7 @@ const projectsInfo = [{
 
 export default function ProjectsSection() {
   return (
-    <section className="bg-gray-100 min-h-[90vh] py-24 flex flex-col gap-10">
+    <section id='projects' className="bg-gray-100 min-h-[90vh] py-24 flex flex-col gap-10">
       <div className="container max-w-5xl mx-auto flex flex-col gap-5">
         <h2 className="text-lg text-blue-600 font-semibold">
           Portfolio

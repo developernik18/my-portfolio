@@ -16,7 +16,7 @@ import nextLogo from '../_assets/_tech-logos/Next.png';
 
 export default function HeroSection() {
   return (
-    <section className="bg-gray-100 min-h-[90vh]">
+    <section id='hero' className="bg-gray-100 min-h-[90vh]">
       <section className="top container max-w-5xl mx-auto flex flex-row justify-between">
         <section className="left max-w-xl flex flex-col gap-8 py-10 min-h-[60vh] justify-center">
           <h1 className=" text-6xl font-bold">

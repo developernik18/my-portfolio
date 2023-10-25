@@ -10,14 +10,19 @@ let animation = {
   exit: 'animate-leftSlideOut'
 }
 
-export default function MobileMenu() {
+type navType = {
+  label: string,
+  linkTo: string
+}
+
+export default function MobileMenu({navValues}: {navValues: navType[]}) {
   const [showMenu, setShowMenu] = useState(false);
   const [activeAnimation, setActiveAnimation] = useState(animation.entrance)
-  
+
   return (
     <>
       <button 
-        className='text-xl hover:text-blue-600' 
+        className='text-3xl hover:text-blue-600 block md:hidden' 
         onClick={() => {
           setActiveAnimation(animation.entrance);
           setShowMenu(true);
@@ -45,21 +50,18 @@ export default function MobileMenu() {
           </button>
           
           <nav className="flex flex-col gap-10 text-2xl pb-10 font-semibold ">
-            <Link href={'#hero'} className="hover:text-blue-600">
-              Home
-            </Link>
-            
-            <Link href={'#about'} className="hover:text-blue-600">
-              About
-            </Link>
-            
-            <Link href={'#project'} className="hover:text-blue-600">
-              Project
-            </Link>
-            
-            <Link href={'#contact'} className="hover:text-blue-600">
-              Contact
-            </Link>
+            {navValues.map(nav => {
+              return (
+                <Link 
+                  href={`#${nav.linkTo}`} 
+                  className="hover:text-blue-600 block md:hidden" 
+                  key={nav.linkTo} 
+                  onClick={() => setShowMenu(false)}
+                >
+                  {nav.label}
+                </Link>
+              )
+            })}
           </nav>
         </section>
       )}

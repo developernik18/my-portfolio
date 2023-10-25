@@ -3,7 +3,7 @@ import AboutMeImg from '../_assets/About_me_img.png';
 
 export default function AboutSection() {
   return (
-    <section className="bg-white min-h-[90vh] flex flex-row items-center">
+    <section id="about" className="bg-white min-h-[90vh] flex flex-row items-center">
         <div className="main-area container max-w-5xl mx-auto flex flex-row justify-between">
           <div className="left basis-1/2">
             <Image src={AboutMeImg} alt={"decorative img"} />
