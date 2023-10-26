@@ -30,14 +30,22 @@ export default function HeroSection() {
           min-h-[20vh] justify-center order-2 text-center 
           lg:min-h-[60vh] lg:order-1 lg:py-10 lg:text-left lg:px-0"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+          <h1 
+            className="text-4xl 
+              sm:text-5xl md:text-6xl 
+              font-bold opacity-0 animate-upFadeIn"
+          >
             Front-End Focused Web Developer
           </h1>
-          <p className="text-lg">
+          <p className="text-lg opacity-0 animate-upFadeIn">
             Hi, I’m Nikhil Kumar. A Front-end Web Developer with 5+ years of
             experience.
           </p>
-          <div className="for-more-info flex flex-row gap-5 text-lg justify-center lg:justify-start">
+          <div 
+            className="for-more-info flex flex-row gap-5 
+              text-lg justify-center lg:justify-start
+              opacity-0 animate-upFadeIn"
+          >
             <Link
               href={"https://www.linkedin.com/in/nikhil1994/"}
               target="_linkedin"
@@ -57,7 +65,11 @@ export default function HeroSection() {
           pt-10 min-h-[10vh] justify-center order-1 w-full
           lg:py-10 lg:pt-16 lg:order-2 lg:min-h-[60vh] lg:w-fit"
         >
-          <Image src={profilePic} alt={"Profile picture"} />
+          <Image 
+            src={profilePic} 
+            alt={"Profile picture"} 
+            className=""
+          />
         </section>
       </section>
 
@@ -67,21 +79,58 @@ export default function HeroSection() {
       >
         <h2 
           className="text-xl font-semibold pb-2
-          border-b-2 border-gray-300 lg:border-none"
+          border-b-2 border-gray-300 lg:border-none
+          opacity-0 animate-fadeIn"
         >
           Tech Stack
         </h2>
         <div className="tech-stack-images flex flex-col items-center md:flex-row gap-10">
           <div className="first-set flex flex-row gap-5">
-            <Image src={htmlLogo} alt="HTML 5" />
-            <Image src={cssLogo} alt="CSS 3" />
-            <Image src={tailwindLogo} alt="Tailwind" />
+            <Image 
+              src={htmlLogo} 
+              alt="HTML 5" 
+              className="hover:-translate-y-1 transition-all 
+                cursor-pointer opacity-0 animate-rightFadeIn"
+            />
+            <Image 
+              src={cssLogo} 
+              alt="CSS 3" 
+              className="hover:-translate-y-1 transition-all 
+                cursor-pointer opacity-0 animate-rightFadeIn"
+            />
+            <Image 
+              src={tailwindLogo} 
+              alt="Tailwind" 
+              className="hover:-translate-y-1 transition-all 
+                cursor-pointer opacity-0 animate-rightFadeIn"
+            />
+
           </div>
           <div className="second-set flex flex-row gap-5">
-            <Image src={jsLogo} alt="JavScript" />
-            <Image src={tsLogo} alt="TypeScript" />
-            <Image src={reactLogo} alt="React.js" />
-            <Image src={nextLogo} alt="Next.js" />
+            <Image 
+              src={jsLogo} 
+              alt="JavScript" 
+              className="hover:-translate-y-1 transition-all 
+                cursor-pointer opacity-0 animate-rightFadeIn"
+            />
+            <Image 
+              src={tsLogo} 
+              alt="TypeScript" 
+              className="hover:-translate-y-1 transition-all 
+                cursor-pointer opacity-0 animate-rightFadeIn"
+            />
+            <Image 
+              src={reactLogo} 
+              alt="React.js" 
+              className="hover:-translate-y-1 transition-all 
+                cursor-pointer opacity-0 animate-rightFadeIn"  
+            />
+            <Image 
+              src={nextLogo} 
+              alt="Next.js" 
+              className="hover:-translate-y-1 transition-all 
+                cursor-pointer opacity-0 animate-rightFadeIn"
+            />
           </div>
         </div>
       </section>

@@ -18,7 +18,7 @@ const navValues = [{
 export default function Header() {
   return (
     <header className="bg-white py-5 px-5 md:px-10 flex flex-row justify-between">
-      <div className=" text-xl font-bold">
+      <div className=" text-xl font-bold opacity-0 animate-fadeIn">
         Nikhil Kumar
       </div>
 
@@ -27,7 +27,8 @@ export default function Header() {
           return (
             <Link 
               href={`#${nav.linkTo}`} 
-              className="hover:text-blue-600 hidden md:block" 
+              className="hover:text-blue-600 hidden md:block 
+                opacity-0 animate-fadeIn" 
               key={nav.linkTo} 
             >
               {nav.label}
