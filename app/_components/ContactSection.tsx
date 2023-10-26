@@ -11,10 +11,15 @@ export default function ContactSection() {
         className="container max-w-5xl mx-auto 
         flex flex-col gap-5 px-0 sm:px-5 md:px-10 lg:px-0"
       >
-        <h2 className="text-lg text-blue-600 font-semibold">
+        <h2 
+          className="text-lg text-blue-600 font-semibold
+            opacity-0 animate-upFadeIn"
+        >
           Contact
         </h2>
-        <p className="text-3xl font-semibold">
+        <p 
+          className="text-3xl font-semibold opacity-0 animate-upFadeIn"
+        >
           Feel free to reach out. I am here for you.
         </p>
       </div>

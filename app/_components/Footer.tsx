@@ -8,10 +8,10 @@ export default function Footer() {
         py-14 px-5 md:px-10 flex flex-col gap-5
         sm:flex-row justify-between items-center"
     >
-      <div className="left">
+      <div className="left opacity-0 animate-fadeIn">
         Copyright © 2023. All rights reserved.
       </div>
-      <div className="for-more-info flex flex-row gap-5">
+      <div className="for-more-info flex flex-row gap-5 opacity-0 animate-upFadeIn">
         <Link
           href={"https://www.linkedin.com/in/nikhil1994/"}
           target="_linkedin"

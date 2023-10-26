@@ -1,7 +1,7 @@
 export default function ContactForm() {
   return (
     <section className="flex flex-col gap-5">
-      <h3 className="text-3xl font-semibold">
+      <h3 className="text-3xl font-semibold opacity-0 animate-upFadeIn">
         Send me an Email
       </h3>
       <form className="flex flex-col gap-1">
@@ -12,7 +12,7 @@ export default function ContactForm() {
           <input 
             type="text" 
             placeholder="Full Name"
-            className="px-4 py-2 border-s-gray-300 border-2 w-full"
+            className="px-4 py-2 border-s-gray-300 border-2 w-full opacity-0 animate-upFadeIn"
           />
         </label>
         
@@ -23,7 +23,7 @@ export default function ContactForm() {
           <input 
             type="email" 
             placeholder="Email"
-            className="px-4 py-2 border-s-gray-300 border-2 w-full"
+            className="px-4 py-2 border-s-gray-300 border-2 w-full opacity-0 animate-upFadeIn"
           />
         </label>
         
@@ -34,7 +34,7 @@ export default function ContactForm() {
           <input 
             type="text" 
             placeholder="Subject"
-            className="px-4 py-2 border-s-gray-300 border-2 w-full"
+            className="px-4 py-2 border-s-gray-300 border-2 w-full opacity-0 animate-upFadeIn"
           />
         </label>
         
@@ -48,7 +48,7 @@ export default function ContactForm() {
             cols={30} 
             rows={4}
             placeholder="Message"
-            className="px-4 py-2 border-s-gray-300 border-2 w-full"
+            className="px-4 py-2 border-s-gray-300 border-2 w-full opacity-0 animate-upFadeIn"
           
           >
           </textarea>
@@ -56,7 +56,8 @@ export default function ContactForm() {
 
         <button 
           className="px-10 py-3 mt-5
-          bg-blue-600 hover:bg-blue-700 text-white rounded"
+          bg-blue-600 hover:bg-blue-700 text-white 
+          rounded opacity-0 animate-upFadeIn"
         >
           Send Message
         </button>
