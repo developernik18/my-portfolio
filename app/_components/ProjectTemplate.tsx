@@ -48,7 +48,7 @@ export default function ProjectTemplate({projectData}: {projectData: ProjectData
             <Image 
               src={projectData.projectImage} 
               alt={projectData.imageAlt} 
-              className="hover:translate-y-full"
+              className="hover:-translate-y-[calc(100%-70vh)] transition-all duration-[3s]"
             />
           </div>
         </div>
