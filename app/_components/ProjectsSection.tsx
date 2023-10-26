@@ -16,8 +16,14 @@ const projectsInfo = [{
 
 export default function ProjectsSection() {
   return (
-    <section id='projects' className="bg-gray-100 min-h-[90vh] py-24 flex flex-col gap-10">
-      <div className="container max-w-5xl mx-auto flex flex-col gap-5">
+    <section 
+      id='projects' 
+      className="bg-gray-100 min-h-[90vh] py-24 
+      flex flex-col gap-10 px-5 lg:px-10"
+    >
+      <div className="container max-w-5xl mx-auto 
+        flex flex-col gap-5 px-0 sm:px-5 md:px-10 lg:px-0"
+      >
         <h2 className="text-lg text-blue-600 font-semibold">
           Portfolio
         </h2>
@@ -25,13 +31,15 @@ export default function ProjectsSection() {
           Few of my personal projects to showcase my work.
         </p>
       </div>
-
-      {projectsInfo.map(projectData => {
-        return <ProjectTemplate 
-          projectData={projectData}
-          key={projectData.title}
-        />
-      })}
+      <div className="px-0 sm:px-5 md:px-10">
+        {projectsInfo.map(projectData => {
+          return <ProjectTemplate 
+            projectData={projectData}
+            key={projectData.title}
+          />
+        })}
+      </div>
+      
       
 
 

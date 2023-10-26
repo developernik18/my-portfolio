@@ -5,9 +5,14 @@ import Link from "next/link";
 export default function ProjectTemplate({projectData}: {projectData: ProjectDataType}) {
   return (
     <section className="project-area container max-w-5xl mx-auto  
-    bg-white p-10 rounded flex flex-col gap-10">
-      <div className="top flex flex-row gap-14 items-center">
-        <div className="left basis-1/2 flex flex-col gap-5">
+    bg-white p-5 sm:p-10 rounded flex flex-col gap-10"
+    >
+      <div 
+        className="top flex flex-col lg:flex-row gap-14 items-center"
+      >
+        <div className="left basis-1/2 flex flex-col gap-5 
+          order-2 lg:order-1"
+        >
           <h3 className="text-2xl font-semibold">
             {projectData.title}
           </h3>
@@ -32,8 +37,11 @@ export default function ProjectTemplate({projectData}: {projectData: ProjectData
             
           </div>
         </div>
-        <div className="right basis-1/2">
-          <div className="img-container max-h-[70vh] overflow-hidden shadow-md rounded">
+        <div className="right basis-1/2 order-1 lg:order-2">
+          <div 
+            className="img-container max-h-[70vh] overflow-hidden 
+            shadow-md rounded"
+          >
             <Image src={projectData.projectImage} alt={projectData.imageAlt} />
           </div>
         </div>
