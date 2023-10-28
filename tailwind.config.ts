@@ -17,6 +17,10 @@ const config: Config = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' }
         },
+        zoomIn: {
+          '0%': { transform: 'scale(0.9)' },
+          '100%': { transform: 'scale(1)' }
+        },
         upFadeIn: {
           '0%': { opacity: '0', transform: 'translateY(20%)'},
           '100%': { opacity: '1', transform: 'translateY(0%)'}
@@ -36,7 +40,8 @@ const config: Config = {
         fadeIn: 'fadeIn 500ms ease-in-out forwards',
         upFadeIn: 'upFadeIn 500ms ease-in-out forwards',
         rightFadeIn: 'rightFadeIn 500ms ease-in-out forwards',
-
+        zoomIn: 'zoomIn 500ms ease-in-out forwards',
+        altInfiniteZoomIn: 'zoomIn 2s ease-in-out forwards infinite',
 
       },
       backgroundImage: {
