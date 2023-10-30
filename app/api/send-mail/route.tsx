@@ -26,7 +26,8 @@ export async function POST(req: NextRequest) {
     <div> From: ${request.name} </div>
     <div> Contact email: ${request.email} </div>
     <div> Subject: ${request.subject} </div>
-
+    <br><hr>
+    <div> Message </div>
     <p> 
       ${request.message} 
     </p>`,
