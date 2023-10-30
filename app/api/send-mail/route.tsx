@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
       to: myEmail,
       subject: request.subject,
       text: request.message,
-      html: EmailTemplate({ fullName: request.message }),
+      html: `<p> ${request.message} </p>`,
     });
 
     return NextResponse.json(info);
