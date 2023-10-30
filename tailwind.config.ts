@@ -41,7 +41,7 @@ const config: Config = {
         upFadeIn: 'upFadeIn 500ms ease-in-out forwards',
         rightFadeIn: 'rightFadeIn 500ms ease-in-out forwards',
         zoomIn: 'zoomIn 500ms ease-in-out forwards',
-        altInfiniteZoomIn: 'zoomIn 2s ease-in-out forwards infinite',
+        altInfiniteZoomIn: 'zoomIn 2s ease-in-out alternate infinite',
 
       },
       backgroundImage: {

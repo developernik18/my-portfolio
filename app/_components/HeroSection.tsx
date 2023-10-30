@@ -17,18 +17,8 @@ import nextLogo from "../_assets/_tech-logos/Next.png";
 const borderColorClass = [{
   bClass: 'border-blue-200',
 },{
-  bClass: 'border-blue-200',
-},{
-  bClass: 'border-blue-200',
-},{
-  bClass: 'border-gray-200',
-},{
-  bClass: 'border-blue-200',
-},{
-  bClass: 'border-blue-200',
-},{
-  bClass: 'border-blue-200',
-},]
+  bClass: 'border-blue-300',
+}]
 
 export default function HeroSection() {
   return (
@@ -85,16 +75,16 @@ export default function HeroSection() {
           <div className="relative">
             {borderColorClass.map((border, index) => {
               return (
-                <>
+                <div key={border.bClass}>
                   <div 
                     className={`absolute m-${index}
                     left-0 top-0 right-0 bottom-0
-                    z-0 rounded-full border-8 bg-blue-300
+                    z-0 rounded-full border-[10] bg-blue-300
                     animate-altInfiniteZoomIn border-solid ${border.bClass}`}
                     style={{animationDelay: ((index * 100) + 'ms')}}
                   >
                   </div>
-                </>
+                </div>
 
               )
             })}
@@ -103,6 +93,7 @@ export default function HeroSection() {
               src={profilePic} 
               alt={"Profile picture"} 
               className="relative z-10 m-5"
+              priority={true}
             />
           </div>
           

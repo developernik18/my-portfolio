@@ -15,7 +15,12 @@ export default function AboutSection() {
         <div className="left basis-1/2 flex flex-row 
           justify-center lg:justify-between opacity-0 animate-fadeIn"
         >
-          <Image src={AboutMeImg} alt={"decorative img"} />
+          <Image 
+            src={AboutMeImg} 
+            alt={"decorative img"} 
+            priority={false}
+            className="w-auto h-auto"
+          />
         </div>
         <div className="right basis-1/2 flex flex-col gap-5 justify-center">
           <h2 className="text-lg text-blue-600 font-semibold opacity-0 animate-upFadeIn">
