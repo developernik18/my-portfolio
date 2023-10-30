@@ -13,7 +13,6 @@ export default function ContactForm() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    console.log('hey');
     const request = {
       name,
       email,
@@ -21,7 +20,7 @@ export default function ContactForm() {
       message
     }
 
-    alert('work in progress');
+    alert('work in progress' + baseUrl);
     // const response = await fetch((baseUrl +'/api/send-mail') , {
     //   method: 'POST',
     //   headers: {'Content-Type': "application/json"},
