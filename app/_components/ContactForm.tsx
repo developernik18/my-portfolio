@@ -20,12 +20,12 @@ export default function ContactForm() {
       message
     }
 
-    alert('work in progress' + baseUrl);
-    // const response = await fetch((baseUrl +'/api/send-mail') , {
-    //   method: 'POST',
-    //   headers: {'Content-Type': "application/json"},
-    //   body: JSON.stringify(request)
-    // })
+    const response = await fetch((baseUrl +'/api/send-mail') , {
+      method: 'POST',
+      headers: {'Content-Type': "application/json"},
+      body: JSON.stringify(request)
+    })
+    console.log(response);
 
   }
 
