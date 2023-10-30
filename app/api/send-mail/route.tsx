@@ -1,28 +1,23 @@
-import { NextRequest, NextResponse } from "next/server";
+import { EmailTemplate } from './EmailTemplate';
+import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
-const nodemailer = require("nodemailer");
-
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-    user: process.env.GMAIL_EMAIL_ADDRESS,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   const request = await req.json();
 
-  const info = await transporter.sendMail({
-    from: request.email,
-    to: request.GMAIL_EMAIL_ADDRESS,
-    subject: request.subject,
-    text: request.message,
-    html: `<p>${request.message}</p>`,
-  });
+  try {
+    const data = await resend.emails.send({
+      from: request.email,
+      to: [process.env.GMAIL_EMAIL_ADDRESS!],
+      subject: request.subject,
+      text: request.message,
+      react: EmailTemplate({ fullName: request.name }),
+    });
 
-  console.log(info);
-  
-  return NextResponse.json(info)
+    return NextResponse.json(data);
+  } catch (error) {
+    return NextResponse.json({ error });
+  }
 }
