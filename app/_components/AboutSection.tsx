@@ -30,7 +30,9 @@ export default function AboutSection() {
             A Lead Web Developer with multiple years of development experience.
           </h3>
           <p className="text-base lg:text-lg opacity-0 animate-upFadeIn">
-            I have worked for 3+ years as a lead web developer in 2 companies. I excel in debugging and working as a team to reach desired result. Afterward, Transitioning to freelancing, I've embraced UI design using Figma, enhancing my ability to deliver well-rounded solutions that integrate technical excellence with compelling design.
+            I have worked for 3+ years as a lead web developer in 2 companies. 
+            I excel in debugging and working as a team to reach desired result. 
+            Afterward, Transitioning to freelancing, I have embraced UI design using Figma, enhancing my ability to deliver well-rounded solutions that integrate technical excellence with compelling design.
           </p>
         </div>
       </div>
