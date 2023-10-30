@@ -23,7 +23,13 @@ export async function POST(req: NextRequest) {
     to: myEmail,
     subject: request.subject,
     text: request.message,
-    html: `<p> ${request.message} </p>`,
+    html: `
+    <div> Name: ${request.name} </div>
+    <div> Senders email: ${request.email} </div>
+
+    <p> 
+      ${request.message} 
+    </p>`,
   });
 
   return NextResponse.json(info);
