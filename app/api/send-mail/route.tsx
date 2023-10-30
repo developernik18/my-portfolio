@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { EmailTemplate } from './EmailTemplate';
 
 const nodemailer = require("nodemailer");
 
