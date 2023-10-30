@@ -46,7 +46,7 @@ export default function HeroSection() {
           </h1>
           <p className="text-lg opacity-0 animate-upFadeIn">
             Hi, I’m Nikhil Kumar. A Front-end Web Developer with 5+ years of
-            experience of design and development.
+            experience in design and development.
           </p>
           <div 
             className="for-more-info flex flex-row gap-5 
