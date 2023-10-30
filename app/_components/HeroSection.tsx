@@ -116,8 +116,8 @@ export default function HeroSection() {
             <Image 
               src={htmlLogo} 
               alt="HTML 5" 
-              className="hover:-translate-y-1 transition-all 
-                cursor-pointer opacity-0 animate-rightFadeIn"
+              className="transition-all 
+                cursor-pointer opacity-0 animate-rightFadeIn hover:-translate-y-1 "
             />
             <Image 
               src={cssLogo} 
