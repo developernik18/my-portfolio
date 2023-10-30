@@ -28,6 +28,7 @@ export async function POST(req: NextRequest) {
     <div> Subject: ${request.subject} </div>
     <br><hr>
     <div> Message </div>
+    <hr>
     <p> 
       ${request.message} 
     </p>`,
