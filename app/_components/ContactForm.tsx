@@ -7,11 +7,18 @@ export default function ContactForm() {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [pending, setPending] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
 
   let baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setPending(true);
+    setSuccessMessage('');
+    setErrorMessage('');
 
     const request = {
       name,
@@ -25,15 +32,23 @@ export default function ContactForm() {
       headers: {'Content-Type': "application/json"},
       body: JSON.stringify(request)
     })
-    console.log(response);
+    
+    if(response.status === 200) {
+      setSuccessMessage('Yay!! Message Sent Successfully');
+      setErrorMessage('')
+    } else {
+      setSuccessMessage('');
+      setErrorMessage('OOps! Something went wrong. Please try again!!')
+    }
 
+    setPending(false);
   }
 
 
   return (
     <section className="flex flex-col gap-5">
       <h3 className="text-3xl font-semibold opacity-0 animate-upFadeIn">
-        Send me an Email
+        Send me your Message
       </h3>
       <form 
         className="flex flex-col gap-1"
@@ -103,12 +118,25 @@ export default function ContactForm() {
         </label>
 
         <button 
-          className="px-10 py-3 mt-5
-          bg-blue-600 hover:bg-blue-700 text-white 
-          rounded opacity-0 animate-upFadeIn"
+          className={`px-10 py-3 mt-5
+          text-white rounded opacity-0 animate-upFadeIn
+          ${pending? "bg-gray-300": "bg-blue-600 hover:bg-blue-700"}`}
+          disabled={pending}
         >
-          Send Message
+          {pending? "Sending" : "Send Message"}
         </button>
+
+        {successMessage && (
+          <div className="bg-green-600 text-white text-center p-3">
+            {successMessage}
+          </div>
+        )}
+
+        {errorMessage && (
+          <div className="bg-red-500 text-white text-center p-3">
+            {errorMessage}
+          </div>
+        )}
       </form>
     </section>
   )

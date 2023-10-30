@@ -18,16 +18,14 @@ const transporter = nodemailer.createTransport({
 export async function POST(req: NextRequest) {
   const request = await req.json();
 
+  const info = await transporter.sendMail({
+    from: request.email,
+    to: myEmail,
+    subject: request.subject,
+    text: request.message,
+    html: `<p> ${request.message} </p>`,
+  });
 
-
-    const info = await transporter.sendMail({
-      from: request.email,
-      to: myEmail,
-      subject: request.subject,
-      text: request.message,
-      html: `<p> ${request.message} </p>`,
-    });
-
-    return NextResponse.json(info);
+  return NextResponse.json(info);
   
 }
