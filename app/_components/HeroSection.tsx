@@ -13,6 +13,13 @@ import tsLogo from "../_assets/_tech-logos/TypeScript.png";
 import reactLogo from "../_assets/_tech-logos/React.png";
 import nextLogo from "../_assets/_tech-logos/Next.png";
 
+
+const borderColorClass = [{
+  bClass: 'border-blue-200',
+},{
+  bClass: 'border-blue-300',
+}]
+
 export default function HeroSection() {
   return (
     <section
@@ -39,7 +46,7 @@ export default function HeroSection() {
           </h1>
           <p className="text-lg opacity-0 animate-upFadeIn">
             Hi, I’m Nikhil Kumar. A Front-end Web Developer with 5+ years of
-            experience.
+            experience of design and development.
           </p>
           <div 
             className="for-more-info flex flex-row gap-5 
@@ -65,11 +72,31 @@ export default function HeroSection() {
           pt-10 min-h-[10vh] justify-center order-1 w-full
           lg:py-10 lg:pt-16 lg:order-2 lg:min-h-[60vh] lg:w-fit"
         >
-          <Image 
-            src={profilePic} 
-            alt={"Profile picture"} 
-            className=""
-          />
+          <div className="relative">
+            {borderColorClass.map((border, index) => {
+              return (
+                <div key={border.bClass}>
+                  <div 
+                    className={`absolute m-${index}
+                    left-0 top-0 right-0 bottom-0
+                    z-0 rounded-full border-[10] bg-blue-300
+                    animate-altInfiniteZoomIn border-solid ${border.bClass}`}
+                    style={{animationDelay: ((index * 100) + 'ms')}}
+                  >
+                  </div>
+                </div>
+
+              )
+            })}
+
+            <Image 
+              src={profilePic} 
+              alt={"Profile picture"} 
+              className="relative z-10 m-5"
+              priority={true}
+            />
+          </div>
+          
         </section>
       </section>
 
