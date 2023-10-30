@@ -123,7 +123,7 @@ export default function ContactForm() {
           ${pending? "bg-gray-300": "bg-blue-600 hover:bg-blue-700"}`}
           disabled={pending}
         >
-          {pending? "Sending" : "Send Message"}
+          {pending? "Sending..." : "Send Message"}
         </button>
 
         {successMessage && (
