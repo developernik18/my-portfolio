@@ -10,7 +10,7 @@ const projectsInfo = [{
   techStack: ["Next.js", "React.js", "Tailwind CSS", "Sanity"],
   projectImage: techTalkHub,
   imageAlt: "Tech Talk Hub Project Image",
-  websiteUrl: "https://tech-talk-hub-e6x8.vercel.app/"
+  websiteUrl: "https://techtalkhub.vercel.app/"
 }]
 
 
